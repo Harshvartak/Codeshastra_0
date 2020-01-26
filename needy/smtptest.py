@@ -12,10 +12,6 @@ def mailer(person,reciever_mail):
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
     s.login(msg['From'],password)
-    
+
     s.sendmail(msg['From'],msg['To'],msg.as_string())
     s.quit()
-
-
-
-mailer('jay','vartak.harsh@gmail.com')

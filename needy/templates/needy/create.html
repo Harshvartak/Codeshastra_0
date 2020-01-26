@@ -14,26 +14,25 @@
 	{% csrf_token %}
 	Name:
 	<br />
-	<input type="text" name="Name" />
+	<input type="text" name="name" />
 	<br />
 	Description:
 	<br />
-	<input type="textbox" name="Description" />
+	<input type="textbox" name="description" />
 	<br />
 	Needs:
 	<br />
-	<input type="textbox" name="url" />
+	<input type="textbox" name="needs" />
 	<br />
 	Image:
 	<br />
-	<input type="file" name="icon" />
+	<input type="file" name="image" />
 	<br />
 	Location:
 	<br />
-	<input type="text" name="image" />
+	<input type="text" name="location" />
 	<br />
 	<br />
 	<input class="btn btn-primary" type="submit" name="Submit"/>
 </form>
-
 {% endblock %}
