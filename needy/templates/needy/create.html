@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if error %}
+
+{{ error }}
+
+{% endif %}
+
+<h1>Register for helping</h1>
+
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data" >
+	{% csrf_token %}
+	Name:
+	<br />
+	<input type="text" name="Name" />
+	<br />
+	Description:
+	<br />
+	<input type="textbox" name="Description" />
+	<br />
+	Needs:
+	<br />
+	<input type="textbox" name="url" />
+	<br />
+	Image:
+	<br />
+	<input type="file" name="icon" />
+	<br />
+	Location:
+	<br />
+	<input type="text" name="image" />
+	<br />
+	<br />
+	<input class="btn btn-primary" type="submit" name="Submit"/>
+</form>
+
+{% endblock %}

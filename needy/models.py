@@ -10,6 +10,5 @@ class Person(models.Model):
     def summary(self):
         return self.needs[:100]
 
-
     def __str__(self):
         return self.name
