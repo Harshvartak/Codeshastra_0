@@ -3,14 +3,14 @@
 <main role="main">
 
   <div class="container">
-    <h1> Needy ppls</h1>
+    <h1> Needy people</h1>
     <br />
     <br />
     <hr />
 
 
 {% load staticfiles %}
-{% for model in person.all %}
+  {% for model in person.all %}
           <div class="col-md-3">
             <div class="card mb-4 box-shadow">
               <a href = #>
@@ -28,9 +28,36 @@
               </div>
             </div>
           </div>
-          {% endfor %}
-        </div>
+    {% endfor %}
+    <h1>NGOS</h1>
+    {% for model in ngos.all %}
+                              <div class = "ngo-card">
+                                  <div class="container">
+                                      <div class="row">
+                                          <div class="col-2">
+                                              <img src= "{{ model.image.url }}" style="margin-left: -150px; margin-top: 50px; height: 250px; width: 250px; border-radius: 100px;">
+                                          </div>
+                                          <div class="col-10" >
+                                              <p style="font-size: 40px; margin-top: 50px; "><a href =  "/{{model.ng_id}}" }> {{model.name}}</a>
+                                              <br>
+                                             </p>
+                                              <br>
+                                              <p style="font-size: 20px;">
+                                              Location: {{ model.location }}
+                                              <br>
+                                              Phone: {{ model.phone }}
+                                              <br>
+                                              Email:{{ model.email }}
+                                              <br>
+                                              Current Funds: {{ model.donations }}
+                                            </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              {% endfor %}
 
+        </div>
         </main>
 {% endblock %}
         <footer class="text-muted">

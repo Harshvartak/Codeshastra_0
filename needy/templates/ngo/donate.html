@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+.btn-donate {
+    background-color: #ea3c17;
+    margin-left: 220px;
+    margin-top: 20px;
+    opacity: .8;
+}
+
+.btn-donate:hover{opacity: 1}
+</style>
+<h2> Donate for a good cause!!</h2>
+<br>
+<br>
+<h2>{{ngo.name}}
+<form action  = "thankyou/{{ngo.ng_id}}" method = "POST">
+  <br />
+  <br />
+  <br />
+{% csrf_token %}
+Receipt Address: <br>
+<input type = "text" name = "email">
+<br><br>
+Donation amount: <br>
+<input type = "text" name = "don">
+<br>
+<br>
+<button type = "submit"> Donate! </button>
+</form>
+{% endblock %}
